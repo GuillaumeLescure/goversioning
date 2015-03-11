@@ -5,14 +5,14 @@ import (
 )
 
 type (
-	flags struct {
+	self struct {
 		verbose uint
 		color   bool
 	}
 )
 
 var (
-	this flags
+	this self
 )
 
 func Parse() {
