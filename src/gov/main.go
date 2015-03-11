@@ -11,8 +11,5 @@ func main() {
 	logs.SetColor(flags.Color())
 	logs.SetVerbose(flags.Verbose())
 
-	err := userfile.ReadAndSetFile("~/.gov.conf")
-	if err != nil {
-		logs.Error(err)
-	}
+	userfile.ReadOrCreateFile(userfile.DefaultPath)
 }
